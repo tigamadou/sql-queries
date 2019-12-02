@@ -20,4 +20,8 @@ SELECT yr, subject, winner  FROM nobel  WHERE yr = 1950
 
  SELECT * FROM nobel WHERE winner  = 'Peter GrÜnberg'
 
- SELECT * FROM nobel WHERE winner= 'EUGENE O\'NEILL'
+ SELECT * FROM nobel WHERE winner= "EUGENE O\'NEILL"
+
+ SELECT winner, yr, subject FROM nobel WHERE winner LIKE 'Sir%' ORDER BY yr DESC,winner ASC
+
+ 
