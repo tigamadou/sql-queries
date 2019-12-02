@@ -9,3 +9,12 @@ SELECT name FROM world
 
 SELECT name FROM world
   WHERE name LIKE '%land'
+
+SELECT name FROM world
+  WHERE name LIKE 'C%ia'
+
+SELECT name FROM world
+  WHERE name LIKE '%oo%'
+
+SELECT name FROM world
+  WHERE name LIKE '%a%a%a%'
