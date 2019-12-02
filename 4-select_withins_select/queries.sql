@@ -18,3 +18,4 @@ SELECT continent, name FROM world x WHERE name <= ALL (SELECT name FROM world y 
 
 SELECT name, continent, population FROM world WHERE continent IN (SELECT continent FROM world  w WHERE 25000000 >= (SELECT MAX(population) FROM world z WHERE w.continent = z.continent));
 
+SELECT name, continent FROM world a WHERE population > ALL (SELECT population*3 FROM world b WHERE b.continent = a.continent AND b.name != a.name)
