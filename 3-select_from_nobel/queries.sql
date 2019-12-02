@@ -24,4 +24,5 @@ SELECT yr, subject, winner  FROM nobel  WHERE yr = 1950
 
  SELECT winner, yr, subject FROM nobel WHERE winner LIKE 'Sir%' ORDER BY yr DESC,winner ASC
 
- 
+ SELECT winner, subject FROM nobel WHERE yr=1984 ORDER BY subject IN ('Physics','Chemistry'), subject, winner
+
