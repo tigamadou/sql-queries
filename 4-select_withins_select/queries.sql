@@ -15,3 +15,6 @@ SELECT name FROM world WHERE gdp > ALL(SELECT gdp FROM world WHERE continent = '
 SELECT continent, name, area FROM world x WHERE area >= ALL(SELECT area FROM world y WHERE y.continent=x.continent AND population>0)
 
 SELECT continent, name FROM world x WHERE name <= ALL (SELECT name FROM world y WHERE y.continent = x.continent)
+
+SELECT name, continent, population FROM world WHERE continent IN (SELECT continent FROM world  w WHERE 25000000 >= (SELECT MAX(population) FROM world z WHERE w.continent = z.continent));
+
