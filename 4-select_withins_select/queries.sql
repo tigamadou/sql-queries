@@ -6,5 +6,6 @@ SELECT name, continent FROM world WHERE continent = (SELECT continent FROM world
 WHERE name = 'Argentina') ORDER BY name
 
 SELECT name, population FROM world WHERE population > (SELECT population FROM world WHERE name = 'Canada') AND population < (SELECT population FROM world 
-WHERE name = 'Poland'); 
+WHERE name = 'Poland')
 
+SELECT name, concat(ROUND(100*population/(SELECT population FROM world WHERE name = 'Germany')), '%') FROM world WHERE continent = 'Europe'
