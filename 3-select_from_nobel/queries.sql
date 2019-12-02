@@ -11,3 +11,5 @@ SELECT yr, subject, winner  FROM nobel  WHERE yr = 1950
  SELECT * FROM nobel  WHERE winner = 'Theodore Roosevelt' OR winner = 'Woodrow Wilson' OR winner = 'Jimmy Carter' OR winner = 'Barack Obama'
 
  SELECT winner FROM nobel  WHERE winner LIKE 'John%';
+
+ SELECT yr, subject, winner FROM nobel WHERE subject ='Physics' AND yr =1980 OR subject ='Chemistry' AND yr =1984
