@@ -14,4 +14,7 @@ SELECt name, (population/1000000) FROM world
   WHERE name LIKE '%United%';
 
   SELECT name, population, area FROM world 
-  WHERE area > 3000000 OR population > 250000000;
+  WHERE area > 3000000 OR population > 250000000
+
+  SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2) FROM world 
+  WHERE continent = 'South America'
